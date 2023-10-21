@@ -207,6 +207,8 @@ main{
 #tags-list a:hover, #categories-list a:hover{
     color: #999;
 }
+/*FIM POST ASIDE*/
+
 /*FOOTER*/
 
 footer{
@@ -216,4 +218,50 @@ footer{
     text-align: center;
     padding: 20px 0;
     background-color: #1b1e23;
+}
+
+/*MOBILE*/
+@media(max-width: 600px) {
+    /*HOME*/
+    header{
+        width: 100%;
+    }
+
+    #logo{
+        display: block;
+        position: relative;
+        margin: 0 auto;
+        left: 0;
+        width: 50px;
+    }
+
+    #navbar{
+        display: none;
+    }
+
+    #title-container{
+        min-width: 100%;
+        margin-top: 20px;
+    }
+
+    #post-container{
+        margin-top: 20px;
+    }
+
+    .post-box{
+        flex: 100% 1 0;
+        padding: 15px;
+        margin: 0;
+    }
+
+    /*POST*/
+    #post-container{
+        grid-template-columns: 100%;
+        padding: 15px;
+        grid-template-areas: "main" "sidebar";      
+    }
+
+    .img-container{
+        width: 100%;
+    }
 }
